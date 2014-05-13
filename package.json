@@ -5,7 +5,7 @@
    "browserify":"browser.js",
    "dependencies": {
      "telehash-cs1a": "0.0.x",
-     "telehash-cs2a": "0.0.x",
+     "telehash-cs2a": "git+https://github.com/rynomad/telehash-cs2a.git#atom",
      "telehash-cs3a": "0.0.x",
      "telehash-ipv4": "0.0.x",
      "telehash-ipv6": "0.0.x",
