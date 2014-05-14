@@ -7,8 +7,8 @@ function install(self, args)
 {
   // crypto
   require("telehash-cs1a").install(self, args);
-  require("telehash-cs2a").install(self, args);
-  require("telehash-cs3a").install(self, args);
+  //require("telehash-cs2a").install(self, args);
+  //require("telehash-cs3a").install(self, args);
 
   // networking
   require("telehash-ipv4").install(self, args);
@@ -33,9 +33,9 @@ exports.init = function(args, cbDone)
   function seed()
   {
     require("telehash-seeds").install(self, args);
-    
+
     self.online(function(err){
-      cbDone(err, self);      
+      cbDone(err, self);
     });
   }
 
@@ -56,9 +56,9 @@ exports.init = function(args, cbDone)
     if(typeof args.id == "string") fs.writeFileSync(args.id, JSON.stringify(id, null, 4));
     args.id = id;
     self.load(id);
-    seed();      
+    seed();
   });
-  
+
   return self;
 }
 
